@@ -1,0 +1,153 @@
+.head {
+  height: 120rpx;
+  background-color: #d81e06;
+}
+.bd {
+  position: relative;
+  height: 350rpx;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+}
+.author {
+  margin-top: 20rpx;
+  color: #94938e;
+}
+.top {
+  position: absolute;
+  top: -120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img {
+  width: 220rpx;
+  height: 290rpx;
+}
+
+.f10 {
+  font-size: 10px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 15rpx;
+}
+
+.btn {
+  height: 80rpx;
+  width: 250rpx;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+.look {
+  position: absolute;
+  bottom: -40rpx;
+  left: 80rpx;
+  background-color: #d81e06;
+  color: #ffffff;
+}
+
+.add {
+  position: absolute;
+  bottom: -40rpx;
+  right: 80rpx;
+  border: 1px solid #eeeeee;
+  background-color: #fff;
+}
+.mask {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-mask {
+  height: 800rpx;
+  width: 500rpx;
+  z-index: 999;
+}
+.actionsheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 300rpx;
+}
+.body {
+  /* height: 900rpx; */
+  padding-bottom: 20rpx;
+  background-color: #eee;
+}
+.rate {
+  text-align: center;
+}
+.star {
+  margin-top: 60rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.chapter {
+  color: #17d0ddad;
+  margin-left: 15rpx;
+}
+.content {
+  background-color: #fff;
+  height: 700rpx;
+  margin: 40rpx;
+}
+.content-title {
+  height: 60rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.bor-red {
+  /* width: 60rpx; */
+  color: #d81e06;
+  border-bottom: 2px solid #d81e06;
+}
+.detail {
+  padding: 20rpx;
+  padding-bottom: 0;
+  color: #666665;
+}
+.info {
+  line-height: 1.5;
+}
+.totalChapter {
+  height: 60rpx;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.change {
+  margin-top:30rpx;
+}
+.recom-img {
+  width: 190rpx;
+  height: 280rpx;
+}
+.recom {
+  margin-top: 20rpx;
+  width: 190rpx;
+}
+.comment {
+  padding-top: 20rpx;
+}
+.comment-bd {
+  padding:  20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+}

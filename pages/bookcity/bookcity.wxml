@@ -1,0 +1,20 @@
+<view class="nav gray flex">
+  <view class=" flex-1 flex-c flex aic">
+    <view class="nav-item {{index==0?'bor-red':''}}" bindtap="click" data-index="0">分类</view>
+  </view>
+  <view class=" flex-1 flex-c flex">
+    <view class="nav-item {{index==1?'bor-red':''}}" bindtap="click" data-index="1">排行</view>
+  </view>
+</view>
+<view class="div"></view>
+<view>
+  <view wx:if="{{index==0}}">
+    <category list="{{male}}" wx:if="{{male.length>0}}" title='男生'></category>
+    <category list="{{female}}" wx:if="{{female.length>0}}" title='女生'></category>
+    <category list="{{press}}" wx:if="{{press.length>0}}" title='出版'></category>
+  </view>
+  <view wx:else>
+  <rank list="{{maleRank}}" wx:if="{{maleRank.length>0}}" title='男生'></rank>
+  <rank list="{{femaleRank}}" wx:if="{{femaleRank.length>0}}" title='女生'></rank>
+  </view>
+</view>

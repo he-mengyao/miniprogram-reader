@@ -1,0 +1,46 @@
+.content {
+  height: 300rpx;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  padding-right: 20rpx;
+}
+.cover {
+  height: 240rpx;
+  margin:0 30rpx;
+}
+.title {
+  color: #000000;
+  font-size: 13px;
+}
+.author {
+  font-size: 12px;
+}
+.bd {
+  height: 110rpx;
+  width: 500rpx;
+  font-size: 10px;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.nav {
+  background-color: #eee;
+  height: 80rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.div {
+  height: 80rpx;
+}
+.list {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

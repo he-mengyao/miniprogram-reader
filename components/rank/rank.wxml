@@ -1,0 +1,7 @@
+<view>
+  <view class="title">{{title}}</view>
+  <view class="content" wx:for="{{list}}" wx:key="index" bindtap="goHots" data-item="{{item}}">
+  <image src="{{imgurl+item.cover}}" class="icon"></image>
+    <view>{{item.title}}</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="title f13">{{title}}</view>
+<view class="content f13">
+  <view class="item" wx:for="{{list}}" wx:key='index' bindtap="goSort" data-gender="{{title}}" data-type="{{item.name}}">
+    <view class="name">{{item.name}}</view>
+    <view class="count">{{item.bookCount}}本</view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<view class="html f14">
+  <view class="flex gray2 nav">
+    <view wx:for="{{list}}" wx:key='index' class="nav1 {{index==currentindex?'red':''}}" bindtap="trigger"
+      data-title="{{item.title}}" data-index="{{index}}">{{item.title}}</view>
+  </view>
+  <view class="scroll_box" wx:if="{{list1.length>0}}">
+    <scroll-view scroll-x="true">
+      <view class="flex  gray2 nav flex-1">
+        <view wx:for="{{list1}}" wx:key='index' class="nav1 {{index==currentindex1?'red':''}}" bindtap="trigger1"
+          data-title="{{item}}" data-index="{{index}}">{{item}}</view>
+        </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="div-120" wx:if="{{list1.length>0}}"></view>
+<view class="div" wx:if="{{list1.length==0}}"></view>
+<view class="body f14">
+  <view class="content gray" wx:for="{{itemList}}" wx:key='index' bindtap="goDetail" data-item="{{item}}">
+    <image src="{{item.cover}}" class="cover"></image>
+    <view>
+      <view class="title">{{item.title}}</view>
+      <view class="author f13">{{item.author}}</view>
+      <view class="bd f12">{{item.shortIntro}}</view>
+      <view class="flex cw f10">
+        <view class="tag1 tag" wx:if="{{item.tags[0]}}">{{item.tags[0]}}</view>
+        <view class="tag2 tag" wx:if="{{item.tags[1]}}">{{item.tags[1]}}</view>
+        <view class="tag3 tag" wx:if="{{item.tags[2]}}">{{item.tags[2]}}</view>
+      </view>
+    </view>
+  </view>
+</view>

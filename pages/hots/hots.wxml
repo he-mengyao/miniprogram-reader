@@ -1,0 +1,45 @@
+<view wx:if="{{total_id}}" class="flex nav f13">
+  <view bindtap="click" data-index="0" data-id="{{week_id}}" class=" flex-1 flex flex-c aic ">
+    <view class="list {{currentIndex==0?'bor-red':''}}">周榜</view>
+  </view>
+  <view bindtap="click" data-index="1" data-id="{{month_id}}" class=" flex-1 flex flex-c aic ">
+    <view class="list {{currentIndex==1?'bor-red':''}}">月榜</view>
+  </view>
+  <view bindtap="click" data-index="2" data-id="{{total_id}}" class=" flex-1 flex flex-c aic ">
+    <view class="list {{currentIndex==2?'bor-red':''}}">总榜</view>
+  </view>
+</view>
+<!-- 占位，导航栏固定定位，总榜有的时候，占位起作用 ；没有总榜时，盒子不存在-->
+<view class="div" wx:if="{{total_id}}"></view>
+<view>
+  <view wx:if="{{currentIndex==0}}">
+    <view class="content gray" wx:for="{{list}}" wx:key='index' bindtap="goDetail" data-item="{{item}}">
+      <image src="{{imgurl+item.cover}}" class="cover"></image>
+      <view>
+        <view class="title">{{item.title}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="bd">{{item.shortIntro}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{currentIndex==1}}">
+    <view class="content gray" wx:for="{{list}}" wx:key='index' bindtap="goDetail" data-item="{{item}}">
+      <image src="{{imgurl+item.cover}}" class="cover"></image>
+      <view>
+        <view class="title">{{item.title}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="bd">{{item.shortIntro}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{currentIndex==2}}">
+    <view class="content gray" wx:for="{{list}}" wx:key='index' bindtap="goDetail" data-item="{{item}}">
+      <image src="{{imgurl+item.cover}}" class="cover"></image>
+      <view>
+        <view class="title">{{item.title}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="bd">{{item.shortIntro}}</view>
+      </view>
+    </view>
+  </view>
+</view>

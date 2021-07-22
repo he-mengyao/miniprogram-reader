@@ -1,0 +1,80 @@
+.html {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+.div-120 {
+  height: 120rpx;
+}
+.div {
+  height: 60rpx;
+}
+.pd-20 {
+  padding: 0 20rpx;
+}
+.nav {
+  height: 60rpx;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.nav1 {
+  margin-right: 20rpx;
+}
+.red {
+  color: #d81e06;
+}
+.content {
+  height: 340rpx;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  padding-right: 20rpx;
+}
+.cover {
+  height: 240rpx;
+  margin:0 30rpx;
+}
+.title {
+  color: #000000;
+  font-size: 13px;
+}
+.bd {
+  width: 500rpx;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.tag {
+  padding: 0 10rpx;
+  border-radius: 5rpx;
+  margin-right: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tag1 {
+  background-color: orange;
+}
+.tag2 {
+  background-color: skyblue;
+}
+.tag3 {
+  background-color: #e0620d;
+}
+/* 左右滑动，宽度自动 */
+.scroll_box{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  }
+.scroll_box scroll-view{
+    width: auto;
+    overflow:hidden;
+}

@@ -1,0 +1,11 @@
+/* pages/help/help.wxss */
+.title {
+  height: 120rpx;
+}
+.question {
+  font-weight: 700;
+  font-size: 14px;
+}
+.content {
+  text-indent: 2em;
+}

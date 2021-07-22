@@ -1,0 +1,43 @@
+/* pages/bookshelf/bookshelf.wxss */
+.nav {
+  height: 160rpx;
+  padding: 0 34rpx;
+}
+.nav-icon {
+  height: 50rpx;
+  width: 50rpx;
+}
+.help {
+  width: 108rpx;
+  height: 60rpx;
+  border: 1px solid #eeeeee;
+  border-radius: 18rpx;
+  margin-right: 10px;
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 10rpx 40rpx;
+}
+.cover {
+  height: 280rpx;
+  width: 200rpx;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60rpx;
+  width: 60rpx;
+}
+.title {
+  text-align: center;
+  width: 200rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

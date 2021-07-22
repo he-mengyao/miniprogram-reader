@@ -1,0 +1,18 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+.div {
+  height: 80rpx;
+}
+.nav-item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

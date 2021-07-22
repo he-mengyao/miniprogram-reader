@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "category":"../../components/categpry/category",
+    "rank":"../../components/rank/rank"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#d81e06",
+  "navigationBarTitleText": "书城",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,77 @@
+<view class="head"></view>
+<view class="bd f10">
+  <view class="top">
+    <view>
+      <image src="{{obj.cover}}" class="img" bindtap="openMask" wx:if="{{obj.cover}}"></image>
+    </view>
+    <view class="title">{{obj.title}}</view>
+    <view class="author">{{obj.author}}</view>
+  </view>
+  <view class="look btn">开始阅读</view>
+  <view class="add btn gray2" bindtap="add" data-item="{{obj}}">{{title}}</view>
+</view>
+<view class="body">
+  <view class="rate flex flex-c">
+    <view wx:for="{{score}}" wx:key='index'>
+      <image class='star' src="../../assets/star-active.png"></image>
+    </view>
+    <view wx:for="{{5-score}}" wx:key='index'>
+      <image class='star' src="../../assets/star.png"></image>
+    </view>
+  </view>
+  <view class="flex flex-c f12">更新至<view class="chapter">{{obj.lastChapter}}</view>
+  </view>
+  <view class="content">
+    <view class="content-title gray flex f14">
+      <view class=" flex-1 flex-c flex">
+        <view class="{{index==0?'bor-red':''}}" bindtap="click" data-index="0">详情</view>
+      </view>
+      <view class=" flex-1 flex-c flex">
+        <view class="{{index==1?'bor-red':''}}" bindtap="click" data-index="1">评价({{total}})</view>
+      </view>
+    </view>
+    <view>
+      <view class="detail" wx:if="{{index==0}}">
+        <scroll-view scroll-y="true" style="height: 620rpx;" scroll-top="{{scrollTop}}" class="f12 info">
+          <view>简介：{{obj.longIntro}}</view>
+          <view class="totalChapter f12">
+            <image src="../../assets/list.png" class="load"></image>
+            总目录({{obj.chaptersCount}})章
+          </view>
+          <view class="flex flex-b change">
+            <view>看过这本书的人还看</view>
+            <view class="flex orange" bindtap="trigger">
+              <image src="../../assets/loading-orange.png" class="load "></image>换一换
+            </view>
+          </view>
+          <view class="flex f10 flex-b">
+            <view class="flex col aic  recom" bindtap="goDetail" data-id="{{item._id}}" wx:for="{{list}}"
+              wx:key='index'>
+              <image src="{{item.cover}}" class="img-h280" wx:if="item.cover"></image>
+              <view class="tac">{{item.title}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="comment gray2 f13" wx:if="{{index==1}}">
+        <scroll-view scroll-y="true" style="height: 620rpx;" scroll-top="{{scrollTop}}"
+          bindscrolltolower='bindscrolltolower'>
+          <view class="comment-bd" wx:for="{{commentList}}" wx:key="index">
+            <view>
+              <image src="{{item.author.avatar}}" class="img-80 br mrr" wx:if="item.author.avatar"></image>
+            </view>
+            <view>
+              <view class="orange">{{item.author.nickname}}</view>
+              <view>{{item.content}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <!-- 遮罩层 -->
+  <view wx:if="{{flag}}" class="mask" bindtap="openMask">
+    <image src="{{obj.cover}}" class="img-mask" wx:if="{{obj.cover}}" bindlongpress="handleLongPress"
+      data-path="{{obj.cover}}"></image>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="gray1">
+  <!-- 顶部 -->
+  <view class="flex aic flex-b nav">
+    <view bindtap="triggle">
+      <image src="../../assets/edit.png" class="nav-icon" wx:if="{{flag}}"></image>
+      <image src="../../assets/Selected.png" class="nav-icon" wx:else></image>
+    </view>
+    <view class="flex aic">
+      <view class="help flex aic flex-c" bindtap="help">帮助</view>
+      <image src="../../assets/loading.png" class="nav-icon"></image>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view>
+    <view wx:if="{{books.length>0}}" class="flex wrap">
+      <view wx:for="{{books}}" wx:key='index' class="content"  bindtap="goDetail" data-item="{{item}}">
+        <image src="{{item.cover}}" class="img-h280" animation="{{animation}}"></image>
+        <view class="title f12 gray1">{{item.title}}</view>
+        <view class="f10 gray2">读到第1章</view>
+        <image src="../../assets/close.png" class="close" wx:if="{{!flag}}" catchtap="close" data-index="{{index}}"></image>
+      </view>
+    </view>
+    <view class="flex flex-c" wx:else>主人还未收藏书籍哦，请去书城收藏吧！</view>
+  </view>
+</view>
